@@ -23,9 +23,15 @@ class UserAccount {
 console.log(start);
 
 
-let fullname = window.prompt("Please enter your first and last name:\n");
-
 let users = Array<UserAccount>();
+
+let fullname = window.prompt("Please enter your first and last name:");
+
+console.log(fullname);
+
+while(fullname === "") {
+    fullname = window.prompt("Please enter your first and last name:");
+}
 
 users.push(new UserAccount("first", "last", 0));
 

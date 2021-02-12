@@ -9,8 +9,12 @@ var UserAccount = /** @class */ (function () {
     return UserAccount;
 }());
 console.log(start);
-var fullname = window.prompt("Please enter your first and last name:\n");
 var users = Array();
+var fullname = window.prompt("Please enter your first and last name:");
+console.log(fullname);
+while (fullname === "") {
+    fullname = window.prompt("Please enter your first and last name:");
+}
 users.push(new UserAccount("first", "last", 0));
 console.log(users[0].fname);
 console.log(end);
